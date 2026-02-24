@@ -25,8 +25,19 @@ if usar_mayus == "si":
 usar_numeros = input("¿Desea incluir números? (si/no): ")
 if usar_numeros == "si":
     caracteres = caracteres + numeros
+    
+usar_simbolos = input("¿Desea incluir símbolos? (si/no): ")
+if usar_simbolos == "si":
+    caracteres = caracteres + simbolos
 
-#EN PROCESO..........................................
+# Generamos la contraseña usando una estructura repetitiva
+contraseña = ""
 
+for i in range(longitud):
+    letra = random.choice(caracteres)
+    contraseña = contraseña + letra
+
+# Mostramos el resultado
+print("La contraseña generada es:", contraseña)
 
 
