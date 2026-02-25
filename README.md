@@ -13,6 +13,7 @@ El objetivo principal es aplicar estructuras básicas de programación en Python
 
 4. Uso de librerías (random)
 
+
 Funcionalidades Principales:
 El programa permite:
 
@@ -40,7 +41,9 @@ Se utiliza la librería random de Python para seleccionar caracteres aleatorios 
 
 El sistema imprime en pantalla la contraseña generada.
 
-Datos del Grupo
+
+
+Datos del Grupo:
 
 Integrante: Joseph Adrian Montero Villalba
 
@@ -49,6 +52,7 @@ Curso: Logica de programación 1B
 Docente: MONICA PATRICIA SALAZAR TAPIA
 
 Institución: Universidad Internacional Del Ecuador
+
 
 Fecha de elaboración:
 24/02/2026
