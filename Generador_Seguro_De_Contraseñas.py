@@ -2,42 +2,50 @@ import random
 
 print("=== GENERADOR DE CONTRASEÑAS ===")
 
-#Pedimos la longitud
-longitud = int(input("Ingrese la longitud de la contraseña: "))
+# Pedimos la longitud con validación simple
+while True:
+    entrada = input("Ingrese la longitud de la contraseña: ")
+    
+    if entrada.isdigit():  # Verifica que sea número
+        longitud = int(entrada)
+        if longitud > 0:
+            break
+        else:
+            print("Ingrese un número mayor que 0.")
+    else:
+        print("Ingrese un número válido.")
 
-#Definimos los caracteres básicos
+# Definimos los caracteres básicos
 minusculas = "abcdefghijklmnopqrstuvwxyz"
 mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 numeros = "0123456789"
 simbolos = "!@#$%&*"
 
-#Variable donde guardaremos todos los caracteres posibles
 caracteres = ""
+caracteres += minusculas  # Siempre agregamos minúsculas
 
-#Siempre agregamos minúsculas
-caracteres = caracteres + minusculas
-
-#Preguntamos opciones al usuario
-usar_mayus = input("¿Desea incluir mayúsculas? (si/no): ")
+# Preguntamos opciones
+usar_mayus = input("¿Desea incluir mayúsculas? (si/no): ").lower()
 if usar_mayus == "si":
-    caracteres = caracteres + mayusculas
+    caracteres += mayusculas
 
-usar_numeros = input("¿Desea incluir números? (si/no): ")
+usar_numeros = input("¿Desea incluir números? (si/no): ").lower()
 if usar_numeros == "si":
-    caracteres = caracteres + numeros
+    caracteres += numeros
     
-usar_simbolos = input("¿Desea incluir símbolos? (si/no): ")
+usar_simbolos = input("¿Desea incluir símbolos? (si/no): ").lower()
 if usar_simbolos == "si":
-    caracteres = caracteres + simbolos
+    caracteres += simbolos
 
-# Generamos la contraseña usando una estructura repetitiva
+# Generamos la contraseña
 contraseña = ""
 
 for i in range(longitud):
     letra = random.choice(caracteres)
-    contraseña = contraseña + letra
+    contraseña += letra
 
 # Mostramos el resultado
 print("La contraseña generada es:", contraseña)
+
 
 
